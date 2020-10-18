@@ -1,0 +1,13 @@
+.banner-bg{
+    background-image: url('../../../images/bannerbackground.png');
+    background-size: cover;
+    height: 415px;
+    position: relative;
+}
+.search-bar{
+    position: absolute;
+    right:50%;
+    top:50%;
+    margin-right: -120px;
+    margin-top: -35px;
+}

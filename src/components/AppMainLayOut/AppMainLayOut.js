@@ -1,10 +1,14 @@
 import React from 'react';
+import Navbar from '../HomePageComponents/Navbar/Navbar';
 import LandingPageLayOut from '../LandingPageLayOut/LandingPageLayOut';
 
 const AppMainLayOut = () => {
     return (
         <div>
-            <LandingPageLayOut/>
+            <div className="container">
+                <Navbar/>
+            </div>
+            <LandingPageLayOut />
         </div>
     );
 };

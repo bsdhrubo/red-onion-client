@@ -11,6 +11,8 @@ const FoodItemDetails = ({ modalIsOpen, closeModal, itemData }) => {
             left: '50%',
             right: 'auto',
             bottom: 'auto',
+            height: 'auto',
+            maxWidth: '850px',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)'
         }
@@ -25,20 +27,20 @@ const FoodItemDetails = ({ modalIsOpen, closeModal, itemData }) => {
 
         if (allCartKeyArray.length > 0) {
             const getExistedId = allCartKeyArray.find(each => each === id)
-            if(getExistedId){
-                const newCount = parseInt(currentCart[getExistedId])+1;
-                addToDatabaseCart(id,newCount);
-            }else{
-                addToDatabaseCart(id,1);
+            if (getExistedId) {
+                const newCount = parseInt(currentCart[getExistedId]) + 1;
+                addToDatabaseCart(id, newCount);
+            } else {
+                addToDatabaseCart(id, 1);
             }
         } else {
-            addToDatabaseCart(id,1);
+            addToDatabaseCart(id, 1);
         }
         console.log(getDatabaseCart())
     }
 
     return (
-        <div className="">
+        <div className="m-5" >
 
             <Modal
                 isOpen={modalIsOpen}
@@ -46,24 +48,26 @@ const FoodItemDetails = ({ modalIsOpen, closeModal, itemData }) => {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <button onClick={closeModal}>close</button>
+                <div className="ml-auto">
+                    <button className="tab-btn" onClick={closeModal}>X</button>
+                </div>
+
 
                 <div className="row">
-                    <div className="col-6">
-                        <br />
-                        <h3>{itemData.name}</h3>
-                        <p>{itemData.details}</p>
-                        <h1>${itemData.price}</h1>
-                        <button onClick={() => handleAddToCart(itemData._id)} className="button">Add to Cart</button>
-                        <br />
+                    <div className="col-md-6 col-sm-12">
+                        <img src={itemData.image} height="70%" alt="" />
+                    </div>
+                    <div className="col-md-6 col-sm-12">
+                        <div className="pl-3">
+                            <h3>{itemData.name}</h3>
+                            <p>{itemData.details}</p>
+                            <h1>${itemData.price}</h1>
+                            <button className="add-to-cart" onClick={() => handleAddToCart(itemData._id)} >
+                                <i className="fa fa-shopping-cart"></i> &nbsp;
+                            Add to Cart</button>
+                        </div>
+                    </div>
 
-                        {/* <div style={{height:'130px', width:'300px', overflow:'auto'}}>
-                        <SameCategory category={item.category}/>
-                        </div> */}
-                    </div>
-                    <div className="col-6">
-                        <img src={itemData.image} alt="" />
-                    </div>
                 </div>
 
             </Modal>

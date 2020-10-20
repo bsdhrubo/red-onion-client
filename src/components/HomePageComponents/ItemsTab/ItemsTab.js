@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FoodDisplay from '../../FoodDisplay/FoodDisplay';
 import FoodItemDetails from '../../FoodDisplay/FoodItemDetails';
+import './ItemsTab.css'
 
 const ItemsTab = () => {
 
@@ -24,12 +25,12 @@ const ItemsTab = () => {
 
     return (
         <div>
-            <div className="tab-options text-center mt-5">
-                <button onClick={()=>setTab('breakfast')}><span>Breakfast</span></button> &nbsp;&nbsp;&nbsp;
-                <button onClick={()=>setTab('lunch')}><span >Lunch</span></button> &nbsp;&nbsp;&nbsp;
-                <button onClick={()=>setTab('dinner')}><span>Dinner</span></button>
+            <div className="tab-options text-center my-5">
+                <button className="tab-btn" onClick={()=>setTab('breakfast')}><span>Breakfast</span></button> &nbsp;&nbsp;&nbsp;
+                <button className="tab-btn" onClick={()=>setTab('lunch')}><span >Lunch</span></button> &nbsp;&nbsp;&nbsp;
+                <button className="tab-btn" onClick={()=>setTab('dinner')}><span>Dinner</span></button>
             </div>
-            <div>
+            <div className="my-5">
                 <FoodDisplay clickedItem={clickedItem} tab={tab}/>
                 {
                     itemClicked.name

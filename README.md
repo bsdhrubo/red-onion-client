@@ -3,21 +3,19 @@
 #### Role : Full Stack Developer
 
 #### Features :
-- Responsive UI
+- Responsive UI/UX
 - Single Page Application (SPA)
-- User can see the services provided by the agency.
-- Authenticated users can order for a service by providing a demo.
-- User can see the progress status of his order.
-- A dashboard is available for authenticated admin.
-- Admin can add new services
-- Admin can change order’s status to notify the clients about progress.
-- Admin can add a new admin.
+- Food items are categorized.
+- User can choose food items.
+- Authenticated users can order foods.
+- Automated calculation and functionalities are added for the cart.
+- Stripe payment method is available for testing purposes.
 
 #### Technologies :
-● Front-end : ReactJS, React-Router
+● Front-end : ReactJS, React-Router, React-Hook-Form, React-Modal
 ● Back-end : NodeJS, ExpressJS, REST API
 ● Authentication : Google Login
-● Database: MongoDB
+● Database : MongoDB
 ● Cloud infrastructure: Heroku
 ● HTML5, CSS3, Bootstrap4, JS, Git, Firebase, etc.
 

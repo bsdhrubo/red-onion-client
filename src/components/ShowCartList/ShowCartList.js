@@ -24,7 +24,7 @@ const ShowCartList = () => {
         const allCartKeyArray = Object.keys(currentCart)
         console.log(allCartKeyArray)
 
-        fetch(`http://localhost:3001/findCarts`, {
+        fetch(`https://red-onion.onrender.com/findCarts`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(allCartKeyArray)

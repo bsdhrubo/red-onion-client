@@ -7,7 +7,7 @@ const FoodDisplay = ({ tab , clickedItem}) => {
     const [tabItems, setTabItems] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:3001/category/${tab}`)
+        fetch(`https://red-onion.onrender.com/category/${tab}`)
             .then(res => res.json())
             .then(data => {
                 setTabItems(data)

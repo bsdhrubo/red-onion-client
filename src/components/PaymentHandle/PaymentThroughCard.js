@@ -13,7 +13,7 @@ const PaymentThroughCard = () => {
         console.log(paymentId)
         const orderDetails = { ...allCartItems, paymentId, orderTime: new Date() }
         console.log(orderDetails)
-        fetch(`http://localhost:3001/addToCart`, {
+        fetch(`https://red-onion.onrender.com/addToCart`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(orderDetails)
